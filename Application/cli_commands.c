@@ -73,11 +73,11 @@ static BaseType_t prvLEDStatusCommand( char *pcWriteBuffer, size_t xWriteBufferL
     
     if( LED_GetValue() )
     {
-        snprintf( pcWriteBuffer, xWriteBufferLen, "LED is ON\r\n" );
+        snprintf( pcWriteBuffer, xWriteBufferLen, "LED is OFF (Active Low)\r\n" );
     }
     else
     {
-        snprintf( pcWriteBuffer, xWriteBufferLen, "LED is OFF\r\n" );
+        snprintf( pcWriteBuffer, xWriteBufferLen, "LED is ON (Active Low)\r\n" );
     }
 
     return pdFALSE;
