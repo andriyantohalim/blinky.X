@@ -1,0 +1,125 @@
+# MPLAB X IDE files
+nbproject/private/
+build/
+dist/
+disassembly/
+*.X.production.hex
+*.X.debug.hex
+
+# MPLAB X Project files (keep these)
+# nbproject/Makefile-*.mk
+# nbproject/Package-*.bash
+# nbproject/project.xml
+
+# Compiled Object files
+*.o
+*.obj
+*.elf
+*.hex
+*.map
+*.sym
+*.lst
+*.cod
+*.tree
+*.d
+
+# Debug files
+*.cof
+*.mcw
+*.mcs
+*.mcp
+*.mptags
+
+# Temporary files
+*~
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# IDE specific files
+.DS_Store
+Thumbs.db
+*.orig
+
+# FreeRTOS specific (if you have demos or tests)
+FreeRTOS/Demo/
+**/TraceRecorder/
+
+# Logs
+*.log
+
+# Memory summary files
+memoryfile.xml
+
+# MPLAB X generated files
+*.X.production.mcp
+*.X.debug.mcp
+
+# Assembly listing files
+*.asm.d
+
+# Dependency files
+*.dep
+
+# Build configuration specific files
+build/default/debug/
+build/default/production/
+dist/default/debug/
+dist/default/production/
+
+# Backup files created by some editors
+*~
+*.backup
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Visual Studio Code
+.vscode/
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Eclipse
+.metadata
+.project
+.cproject
+.settings/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# XC compiler specific
+*.pre
+*.p1
+*.d
+*.as
+*.obj
+*.o
+*.sym
+*.lst
+*.err
