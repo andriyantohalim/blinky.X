@@ -29,7 +29,7 @@ static const CLI_Command_Definition_t xLEDStatusCommand =
     0
 };
 
-/* LED control command implementation */
+/* LED control command implementation for ACTIVE-LOW LED */
 static BaseType_t prvLEDCommand( char *pcWriteBuffer, size_t xWriteBufferLen, const char *pcCommandString )
 {
     const char *pcParameter;
@@ -42,17 +42,20 @@ static BaseType_t prvLEDCommand( char *pcWriteBuffer, size_t xWriteBufferLen, co
     {
         if( strncmp( pcParameter, "on", 2 ) == 0 )
         {
-            LED_SetHigh();
-            snprintf( pcWriteBuffer, xWriteBufferLen, "LED turned ON\r\n" );
+            LED_SetDigitalOutput();
+            LED_SetLow();   // For active-low LED, LOW = ON
+            snprintf( pcWriteBuffer, xWriteBufferLen, "LED turned ON (Active-Low)\r\n" );
         }
         else if( strncmp( pcParameter, "off", 3 ) == 0 )
         {
-            LED_SetLow();
-            snprintf( pcWriteBuffer, xWriteBufferLen, "LED turned OFF\r\n" );
+            LED_SetDigitalOutput();
+            LED_SetHigh();  // For active-low LED, HIGH = OFF
+            snprintf( pcWriteBuffer, xWriteBufferLen, "LED turned OFF (Active-Low)\r\n" );
         }
         else
         {
-            snprintf( pcWriteBuffer, xWriteBufferLen, "Invalid parameter. Use 'on' or 'off'\r\n" );
+            snprintf( pcWriteBuffer, xWriteBufferLen, "Invalid parameter '%.*s'. Use 'on' or 'off'\r\n", 
+                     (int)xParameterStringLength, pcParameter );
         }
     }
     else
