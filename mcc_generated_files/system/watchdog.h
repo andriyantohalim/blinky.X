@@ -11,7 +11,7 @@
  *
  * @skipline @version   PLIB Version 1.2.1
  *
- * @skipline  Device : dsPIC33CK64MP105
+ * @skipline  Device : dsPIC33CK64MC105
 */
 /*
 © [2025] Microchip Technology Inc. and its subsidiaries.

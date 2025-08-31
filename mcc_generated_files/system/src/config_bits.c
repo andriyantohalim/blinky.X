@@ -11,7 +11,7 @@
  *
  * @version   PLIB Version 1.2.3
  *
- * @skipline  Device : dsPIC33CK64MP105
+ * @skipline  Device : dsPIC33CK64MC105
 */
 
 /*
@@ -94,7 +94,6 @@
 
 // FDEVOPT
 #pragma config ALTI2C1 = OFF    //Alternate I2C1 Pin bit->I2C1 mapped to SDA1/SCL1 pins
-#pragma config ALTI2C2 = OFF    //Alternate I2C2 Pin bit->I2C2 mapped to SDA2/SCL2 pins
 #pragma config SMB3EN = SMBUS3    //SM Bus Enable->SMBus 3.0 input levels
 #pragma config SPI2PIN = PPS    //SPI2 Pin Select bit->SPI2 uses I/O remap (PPS) pins
 

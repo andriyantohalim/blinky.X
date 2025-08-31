@@ -9,7 +9,7 @@
  *            
  * @version   Driver Version 1.0.1
  *            
- * @skipline  Device : dsPIC33CK64MP105
+ * @skipline  Device : dsPIC33CK64MC105
 */
 
 /*

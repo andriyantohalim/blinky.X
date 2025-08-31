@@ -11,7 +11,7 @@
  *
  * @skipline @version   PLIB Version 1.4.0
  *
- * @skipline  Device : dsPIC33CK64MP105
+ * @skipline  Device : dsPIC33CK64MC105
 */
 
 /*
@@ -126,32 +126,10 @@ void ERROR_HANDLER _SoftTrapError(void)
       TRAPS_halt_on_error(TRAPS_DOOVR_ERR);
     }
 
-#ifdef _DAE
-    if(INTCON3bits.DAE == 1)
-    {
-      INTCON3bits.DAE = 0;  //Clear the trap flag
-      TRAPS_halt_on_error(TRAPS_DAE_ERR);
-    }
-
-#endif
     if(INTCON3bits.NAE == 1)
     {
       INTCON3bits.NAE = 0;  //Clear the trap flag
       TRAPS_halt_on_error(TRAPS_NVM_ERR);
-    }
-
-#ifdef _CAN
-    if(INTCON3bits.CAN == 1)
-    {
-      INTCON3bits.CAN = 0;  //Clear the trap flag
-      TRAPS_halt_on_error(TRAPS_CAN_ERR);
-    }
-
-#endif
-    if(INTCON3bits.APLL == 1)
-    {
-      INTCON3bits.APLL = 0;  //Clear the trap flag
-      TRAPS_halt_on_error(TRAPS_APLL_ERR);
     }
 
     while(1)

@@ -11,7 +11,7 @@
  *
  * @version   PLIB Version 1.4.1
  *
- * @skipline  Device : dsPIC33CK64MP105
+ * @skipline  Device : dsPIC33CK64MC105
 */
 
 /*
@@ -72,15 +72,6 @@
  */
 void CLOCK_Initialize(void);
 
-/**
- * @ingroup  clockdriver
- * @brief    Returns Auxiliary PLL status
- * @pre      \ref CLOCK_Initialize() should be called for the associated
- *           function to work.
- * @return   true   - Auxiliary PLL locked
- * @return   false  - Auxiliary PLL not locked
- */
-bool CLOCK_AuxPllLockStatusGet(void);
 
 #endif    /* CLOCK_H */
 /**

@@ -19,6 +19,7 @@
     THIS SOFTWARE.
 */
 #include "mcc_generated_files/system/system.h"
+#include "mcc_generated_files/system/pins.h"
 #include "FreeRTOS.h"
 #include "task.h"
 #include "Application/cli_commands.h"
@@ -30,6 +31,10 @@
 int main(void)
 {
     SYSTEM_Initialize();
+    
+    /* Configure LED as output and set initial state */
+    LED_SetDigitalOutput();
+    LED_SetLow();  // Start with LED off
     
     /* Create CLI task */
     vCreateCLITask();

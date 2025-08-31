@@ -1,19 +1,19 @@
 # FreeRTOS LED Control via UART CLI
 
-A demonstration project for the dsPIC33CK64MP105 microcontroller that implements a command-line interface (CLI) over UART to control an LED using FreeRTOS.
+A demonstration project for the dsPIC33CK64MC105 microcontroller that implements a command-line interface (CLI) over UART to control an LED using FreeRTOS.
 
 ## Hardware Requirements
 
-- **Microcontroller**: dsPIC33CK64MP105
+- **Microcontroller**: dsPIC33CK64MC105
 - **LED**: Connected to pin RD10
 - **UART**: UART1 configured for serial communication
-- **Development Board**: Compatible with dsPIC33CK64MP105
+- **Development Board**: Compatible with dsPIC33CK64MC105
 
 ## Software Requirements
 
 - **MPLAB X IDE**: v6.15 or later
 - **XC16 Compiler**: v2.10 or later
-- **Device Family Pack**: dsPIC33CK-MP_DFP v1.12.354 or later
+- **Device Family Pack**: dsPIC33CK-MC_DFP v1.17.244 or later
 - **MCC (MPLAB Code Configurator)**: For peripheral configuration
 
 ## Features
@@ -185,7 +185,7 @@ This project uses FreeRTOS which is licensed under the MIT License. Microchip-ge
 ## Additional Resources
 
 - [FreeRTOS Documentation](https://www.freertos.org/Documentation/RTOS_book.html)
-- [dsPIC33CK Family Datasheet](https://www.microchip.com/en-us/product/dsPIC33CK64MP105)
+- [dsPIC33CK Family Datasheet](https://www.microchip.com/en-us/product/dsPIC33CK64MC105)
 - [MPLAB X IDE User Guide](https://microchip.com/mplabx)
 - [XC16 Compiler Guide](https://microchip.com/xc16)
 

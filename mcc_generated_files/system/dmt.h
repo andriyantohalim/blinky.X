@@ -13,7 +13,7 @@
  *
  * @skipline @version   PLIB Version 1.1.1
  *
- * @skipline  Device : dsPIC33CK64MP105
+ * @skipline  Device : dsPIC33CK64MC105
 */
 
 /*

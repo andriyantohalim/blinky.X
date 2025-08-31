@@ -11,7 +11,7 @@
  *
  * @skipline @version   PLIB Version 1.3.1
  *
- * @skipline  Device : dsPIC33CK64MP105
+ * @skipline  Device : dsPIC33CK64MC105
 */
 
 /*
@@ -81,7 +81,7 @@ void PINS_Initialize(void)
     ODCA = 0x0000;
     ODCB = 0x0000;
     ODCC = 0x0000;
-    ODCD = 0x0000;
+    ODCD = 0x0400;
 
 
     /****************************************************************************

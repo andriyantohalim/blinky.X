@@ -11,7 +11,7 @@
  *
  * @version   PLIB Version 1.4.1
  *
- * @skipline  Device : dsPIC33CK64MP105
+ * @skipline  Device : dsPIC33CK64MC105
 */
 
 /*
@@ -47,9 +47,6 @@ void CLOCK_Initialize(void)
        Clock source                                  :  FRC Oscillator
        System frequency (Fosc)                       :  8.00 MHz
        Clock switching enabled                       :  false
-       Auxiliary clock source                        :  FRC Oscillator
-       Auxiliary clock input frequency               :  8.00 MHz
-       Auxiliary clock PLL output frequency (AFpllo) :  8.00 MHz
     */
     // RCDIV FRC/1; PLLPRE 1:1; DOZE 1:8; DOZEN disabled; ROI disabled; 
     CLKDIV = 0x3001;
@@ -59,12 +56,6 @@ void CLOCK_Initialize(void)
     OSCTUN = 0x0;
     // PLLPOST 1:4; VCODIV FVCO/4; POST2DIV 1:1; 
     PLLDIV = 0x41;
-    // ENAPLL disabled; FRCSEL FRC Oscillator; APLLPRE 1:1; 
-    ACLKCON1 = 0x101;
-    // APLLFBDIV 150; 
-    APLLFBD1 = 0x96;
-    // APSTSCLR 1:4; APOST2DIV 1:1; AVCODIV FVCO/4; 
-    APLLDIV1 = 0x41;
     // ROEN disabled; DIVSWEN disabled; ROSLP disabled; ROSEL ; OE disabled; ROSIDL disabled; 
     REFOCONL = 0x0;
     // RODIV 0; 
@@ -77,25 +68,21 @@ void CLOCK_Initialize(void)
     PMDCON = 0x0;
     // ADC1MD enabled; T1MD enabled; U2MD enabled; U1MD enabled; SPI2MD enabled; SPI1MD enabled; QEIMD enabled; PWMMD enabled; I2C1MD enabled; 
     PMD1 = 0x0;
-    // CCP2MD enabled; CCP1MD enabled; CCP4MD enabled; CCP3MD enabled; CCP5MD enabled; 
+    // CCP2MD enabled; CCP1MD enabled; CCP4MD enabled; CCP3MD enabled; 
     PMD2 = 0x0;
-    // U3MD enabled; CRCMD enabled; I2C2MD enabled; QEI2MD enabled; PMPMD enabled; 
+    // U3MD enabled; CRCMD enabled; 
     PMD3 = 0x0;
     // REFOMD enabled; 
     PMD4 = 0x0;
-    // DMA1MD enabled; DMA2MD enabled; DMA3MD enabled; DMA0MD enabled; SPI3MD enabled; 
+    // DMA1MD enabled; DMA2MD enabled; DMA3MD enabled; DMA0MD enabled; 
     PMD6 = 0x0;
-    // PTGMD enabled; CMP1MD enabled; CMP3MD enabled; CMP2MD enabled; 
+    // PTGMD enabled; CMP1MD enabled; 
     PMD7 = 0x0;
-    // DMTMD enabled; CLC3MD enabled; OPAMPMD enabled; BIASMD enabled; CLC4MD enabled; SENT1MD enabled; CLC1MD enabled; CLC2MD enabled; SENT2MD enabled; 
+    // DMTMD enabled; CLC3MD enabled; OPAMPMD enabled; BIASMD enabled; CLC4MD enabled; SENT1MD enabled; CLC1MD enabled; CLC2MD enabled; 
     PMD8 = 0x0;
     // CF no clock failure; NOSC FRC; CLKLOCK unlocked; OSWEN Switch is Complete; 
     __builtin_write_OSCCONH((uint8_t) (0x00));
     __builtin_write_OSCCONL((uint8_t) (0x00));
 }
 
-bool CLOCK_AuxPllLockStatusGet(void)
-{
-    return ACLKCON1bits.APLLCK;
-}
 
