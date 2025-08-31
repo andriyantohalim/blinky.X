@@ -3,6 +3,8 @@ nbproject/private/
 build/
 dist/
 disassembly/
+.generated_files/
+queuelogs/
 *.X.production.hex
 *.X.debug.hex
 
